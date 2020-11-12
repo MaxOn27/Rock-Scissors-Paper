@@ -5,6 +5,16 @@ body {
     font-family: "Arial Narrow";
 }
 
+.gameWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: 20px;
+}
+
 .score {
     height: 100px;
     width: 300px;
@@ -18,16 +28,6 @@ body {
 .score h1 {
     color: #117302;
     margin: 10px 30px;
-}
-
-.gameWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    margin: 20px;
 }
 
 .title {

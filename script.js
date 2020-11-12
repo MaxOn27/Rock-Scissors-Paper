@@ -28,13 +28,23 @@ startBTN.addEventListener('click', (event) => {
             `Make your choice! ${ROCK}, ${PAPER} or ${SCISSORS}?`,
             '').toUpperCase();
 
+        const DEFAULT_PLAYER_SELECTION = () => {
+            const randomChoice = Math.random();
+            if (randomChoice <= 0.34) {
+                return ROCK;
+            } else if (randomChoice <= 0.34) {
+                return PAPER;
+            } else {
+                return SCISSORS;
+            }
+        }
+
         if (selection !== ROCK
             &&
             selection !== PAPER
             &&
             selection !== SCISSORS) {
-            console.log(WRONG_TEXT)
-            return;
+            return DEFAULT_PLAYER_SELECTION();
         }
         return selection;
     };
@@ -57,11 +67,12 @@ startBTN.addEventListener('click', (event) => {
 
     function updatePlayerScore(){
         playerCount.innerHTML = playerScore;
-    };
+    }
 
     function updateComputerScore(){
         computerCount.innerHTML = computerScore;
-    };
+    }
+
     /**
      * To get winner of the round
      * @param playerSelection
