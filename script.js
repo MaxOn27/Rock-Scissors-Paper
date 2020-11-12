@@ -28,11 +28,16 @@ startBTN.addEventListener('click', (event) => {
             `Make your choice! ${ROCK}, ${PAPER} or ${SCISSORS}?`,
             '').toUpperCase();
 
+        /**
+         * Default player's choice if the prompt is empty or has invalid value
+         * @returns {string}
+         * @constructor
+         */
         const DEFAULT_PLAYER_SELECTION = () => {
             const randomChoice = Math.random();
             if (randomChoice <= 0.34) {
                 return ROCK;
-            } else if (randomChoice <= 0.34) {
+            } else if (randomChoice <= 0.67) {
                 return PAPER;
             } else {
                 return SCISSORS;
