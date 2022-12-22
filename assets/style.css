@@ -6,6 +6,7 @@ body {
 }
 
 .gameWrapper {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,4 +66,34 @@ h3 {
     transition: ease-in .5s;
     background-color: #ffebcd;
     color: #117302;
+}
+
+@media (min-width: 500px) {
+    .score {
+        height: 300px;
+        width: 80%;
+        border: 3px solid #d3d3d3;
+        background-color: #ffebcd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .score h1 {
+        font-size: 5rem;
+    }
+
+    .playerChoice h3, .computerChoice h3 {
+        font-size: 2.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #start-btn {
+        width: 50%;
+        height: 100px;
+        font-size: 2.5rem;
+    }
 }
