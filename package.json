@@ -1,0 +1,23 @@
+{
+  "name": "rock_paper_scissors",
+  "version": "1.0.0",
+  "description": "_The game built with vanilla JS and uses PWA_",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxOn27/Rock-Scissors-Paper.git"
+  },
+  "author": "MaxOn27",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxOn27/Rock-Scissors-Paper/issues"
+  },
+  "homepage": "https://github.com/MaxOn27/Rock-Scissors-Paper#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
