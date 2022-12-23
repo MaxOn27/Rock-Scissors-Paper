@@ -44,15 +44,16 @@ class RSP {
     };
 
     appendChoices() {
-        const playerChoice = document.createElement('h3');
+        const playerChoice = document.querySelector('.playerChoice');
         playerChoice.appendChild(document.createTextNode(this.playersChoice()));
-        player.appendChild(playerChoice);
+        // player.appendChild(playerChoice);
 
         this.player = playerChoice.innerText;
 
-        const computerChoice = document.createElement('h3');
+        const computerChoice = document.querySelector('.computerChoice');
+        console.log(computerChoice)
         computerChoice.appendChild(document.createTextNode(this.computersChoice()));
-        computer.appendChild(computerChoice);
+        // computer.appendChild(computerChoice);
 
         this.computer = computerChoice.innerText;
     };

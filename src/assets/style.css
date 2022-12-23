@@ -6,12 +6,11 @@ body {
 }
 
 .gameWrapper {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: wrap column;
-    margin: 20px;
 }
 
 .score {
@@ -36,10 +35,10 @@ body {
 
 .choice {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.playerChoice h3, .computerChoice h3 {
+.playerChoice, .computerChoice {
     margin: 10px 150px;
     font-family: 'Architects Daughter', cursive;
 }
@@ -66,4 +65,45 @@ h3 {
     transition: ease-in .5s;
     background-color: #ffebcd;
     color: #117302;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: aquamarine;
+    }
+
+    .score {
+        height: 100px;
+        width: 80%;
+        margin-top: 10%;
+    }
+
+    .score h1 {
+        font-size: 3rem;
+    }
+
+    .title {
+        width: 100%;
+    }
+
+    .choice {
+        width: 100%;
+    }
+
+    .playerChoice, .computerChoice {
+        width: 50%;
+        font-size: 1.25rem;
+        margin:10px 15%;
+    }
+
+    h1 {
+        margin: 5%;
+        font-size: 1.25rem;
+    }
+
+    #start-btn {
+        width: 70%;
+        height: 70px;
+        font-size: 1.25rem;
+    }
 }
