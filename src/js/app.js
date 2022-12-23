@@ -39,12 +39,16 @@ class RSP {
     };
 
     appendChoices() {
+        const playerSpan = document.createElement("span")
         const playerChoice = document.querySelector('.playerChoice');
-        playerChoice.appendChild(document.createTextNode(this.playersChoice()));
+        playerChoice.appendChild(playerSpan)
+        playerSpan.appendChild(document.createTextNode(this.playersChoice()));
         this.player = playerChoice.innerText;
 
+        const computerSpan = document.createElement("span")
         const computerChoice = document.querySelector('.computerChoice');
-        computerChoice.appendChild(document.createTextNode(this.computersChoice()));
+        computerChoice.appendChild(computerSpan);
+        computerSpan.appendChild(document.createTextNode(this.computersChoice()));
         this.computer = computerChoice.innerText;
     };
 

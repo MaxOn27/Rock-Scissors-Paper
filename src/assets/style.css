@@ -39,6 +39,10 @@ body {
 }
 
 .playerChoice, .computerChoice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 10px 150px;
     font-family: 'Architects Daughter', cursive;
 }
@@ -87,6 +91,7 @@ h3 {
     }
 
     .choice {
+        display: flex;
         width: 100%;
     }
 
