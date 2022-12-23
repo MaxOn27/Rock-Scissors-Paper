@@ -1,9 +1,3 @@
-const player = document.querySelector('.playerChoice');
-const computer = document.querySelector('.computerChoice');
-const startBTN = document.querySelector('#start-btn');
-const playerCount = document.querySelector('.playerCount');
-const computerCount = document.querySelector('.computerCount');
-
 const WRONG_TEXT = 'INVALID INPUT';
 const PLAYER_WIN = 'YOU WIN';
 const COMPUTER_WIN = 'YOU LOST';
@@ -19,6 +13,7 @@ class RSP {
     }
 
     start() {
+        const startBTN = document.querySelector('#start-btn');
         startBTN.addEventListener("click", () => {
             this.appendChoices();
             this.compareChoices()
@@ -46,21 +41,14 @@ class RSP {
     appendChoices() {
         const playerChoice = document.querySelector('.playerChoice');
         playerChoice.appendChild(document.createTextNode(this.playersChoice()));
-        // player.appendChild(playerChoice);
-
         this.player = playerChoice.innerText;
 
         const computerChoice = document.querySelector('.computerChoice');
-        console.log(computerChoice)
         computerChoice.appendChild(document.createTextNode(this.computersChoice()));
-        // computer.appendChild(computerChoice);
-
         this.computer = computerChoice.innerText;
     };
 
     compareChoices() {
-        console.log(this.player);
-        console.log(this.computer);
         if (this.player === this.computer) {
             return DRAW
         } else if (
@@ -79,11 +67,13 @@ class RSP {
     };
 
     updatePlayerScore(){
-         playerCount.innerHTML = this.playerScore;
+        const playerCount = document.querySelector('.playerCount');
+        playerCount.innerHTML = this.playerScore;
     };
 
     updateComputerScore(){
-         computerCount.innerHTML = this.computerScore;
+        const computerCount = document.querySelector('.computerCount');
+        computerCount.innerHTML = this.computerScore;
      }
 }
 
