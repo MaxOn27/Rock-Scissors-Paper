@@ -19,10 +19,11 @@ class RSP {
     }
 
     playersChoice() {
-        return prompt(
+        const msg = prompt(
             `Make your choice! ${this.choice.join(", ")}?`,
             '').toUpperCase();
 
+        return this.choice.filter(choice => Array.from(choice)[0] === Array.from(msg)[0])[0] || msg;
     }
 
     computersChoice() {
