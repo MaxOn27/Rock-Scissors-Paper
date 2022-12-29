@@ -6,8 +6,6 @@ const DRAW = 'DRAW';
 class RSP {
     constructor(choice) {
         this.choice = choice;
-        this.player = " ";
-        this.computer = " ";
         this.playerScore = 0;
         this.computerScore = 0;
     }
@@ -39,26 +37,31 @@ class RSP {
     };
 
     appendChoices() {
+        const prevPlayerChoice = document.querySelector(".playerChoice span");
+        if (prevPlayerChoice !== null) prevPlayerChoice.remove();
         const playerSpan = document.createElement("span")
         const playerChoice = document.querySelector('.playerChoice');
         playerChoice.appendChild(playerSpan)
         playerSpan.appendChild(document.createTextNode(this.playersChoice()));
-        this.player = playerChoice.innerText;
 
+        const prevComputerChoice = document.querySelector(".computerChoice span");
+        if (prevComputerChoice !== null) prevComputerChoice.remove();
         const computerSpan = document.createElement("span")
         const computerChoice = document.querySelector('.computerChoice');
         computerChoice.appendChild(computerSpan);
         computerSpan.appendChild(document.createTextNode(this.computersChoice()));
-        this.computer = computerChoice.innerText;
     };
 
     compareChoices() {
-        if (this.player === this.computer) {
+        let player = document.querySelector('.playerChoice').textContent;
+        let computer = document.querySelector('.computerChoice').textContent;
+
+        if (player === computer) {
             return DRAW
         } else if (
-            (this.player === "ROCK" && this.computer === "SCISSORS") ||
-            (this.player === "SCISSORS" && this.computer === "PAPER") ||
-            (this.player === "PAPER" && this.computer === "ROCK")
+            (player === "ROCK" && computer === "SCISSORS") ||
+            (player === "SCISSORS" && computer === "PAPER") ||
+            (player === "PAPER" && computer === "ROCK")
         ) {
             this.playerScore++
             this.updatePlayerScore();
